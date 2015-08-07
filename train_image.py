@@ -18,12 +18,12 @@ from glob import glob
 import cPickle
 import platform
 import scipy.misc
-from zoomingstream import ZoomingStream
-from twitch import TwitchOutputStream, TwitchOutputStreamRepeater
-from read_the_chat import ChatReader
+#from zoomingstream import ZoomingStream
+#from twitch import TwitchOutputStream, TwitchOutputStreamRepeater
+#from read_the_chat import ChatReader
 
 import utils
-
+import pdb
 # warnings.filterwarnings('ignore', '.*topo.*')
 
 if len(sys.argv) < 2:
@@ -31,7 +31,7 @@ if len(sys.argv) < 2:
     cfg_path = "default_image"
 else:
     cfg_path = sys.argv[1]
-
+pdb.set_trace()
 cfg_name = cfg_path.split("/")[-1]
 print "Model:", cfg_name
 cfg = importlib.import_module("models.%s" % cfg_name)
